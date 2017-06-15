@@ -1,6 +1,6 @@
 [package]
 name = "imgcompare"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Mahmoud Al-Qudsi <mqudsi@neosmart.net>"]
 description = "Check if two images are visuall identical."
 homepage = "https://github.com/neosmart/imgcompare"
