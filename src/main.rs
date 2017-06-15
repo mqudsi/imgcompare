@@ -15,15 +15,20 @@ fn main() {
        return;
    }
 
+   let path1 = Path::new(&args[1]);
+   let path2 = Path::new(&args[2]);
 
-   let img1 = image::open(&Path::new(&args[1])).unwrap();
-   let img2 = image::open(&Path::new(&args[2])).unwrap();
+   let img1 = image::open(&path1).unwrap();
+   let img2 = image::open(&path2).unwrap();
 
    let result = compare_imgs(img1, img2);
 
    std::process::exit(match result {
        true => 0,
-       false => -1
+       false => {
+           println!("Images {} and {} differ!", path1.display(), path2.display());
+           -1
+       }
    });
 }
 
